@@ -1,14 +1,14 @@
 package com.karbaros.srishtiassignment;
 
+import android.app.Activity;
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.karbaros.srishtiassignment.databinding.ActivityRecoverPasswordBinding;
 
-public class RecoverPasswordActivity extends AppCompatActivity {
+public class RecoverPasswordActivity extends Activity {
     ActivityRecoverPasswordBinding recoverPasswordBinding;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "292364092624",
+    "firebase_url": "https://fir-demo-ff440.firebaseio.com",
+    "project_id": "fir-demo-ff440",
+    "storage_bucket": "fir-demo-ff440.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292364092624:android:6072dfed7eb373f6",
+        "android_client_info": {
+          "package_name": "com.karbaros.srishtiassignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "292364092624-0pt348ot4gmpqdhahmulqjej7labg2tl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdMdZs4jHN4S3u4Q87_ko1I5Z3rpGZJ-8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
