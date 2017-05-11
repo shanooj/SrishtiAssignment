@@ -26,7 +26,7 @@ public class RecoverPasswordActivity extends Activity {
             @Override
             public void onClick(View view) {
                editor = sharedPreferences.edit();
-                editor.putString("phone", recoverPasswordBinding.etConfrmPhone.getText().toString());
+                editor.putString("password", recoverPasswordBinding.etNewPassword.getText().toString());
                 editor.commit();
                 finish();
             }

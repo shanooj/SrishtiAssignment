@@ -19,4 +19,8 @@
     <string name="nameInputValidatoin">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
     <string name="submit">Submit</string>
     <string name="reset">Reset</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="enter_new_password">Enter New Password</string>
 </resources>

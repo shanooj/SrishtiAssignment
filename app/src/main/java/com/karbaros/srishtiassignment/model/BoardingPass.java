@@ -14,11 +14,13 @@ public class BoardingPass {
     private String origin;
     private String seat;
     private String terminal;
+    private String plane;
 
     public BoardingPass() {
     }
 
-    public BoardingPass(String arrival, String boardingIn, String boardingTime, String departure, String destination, String gate, String origin, String seat, String terminal) {
+    public BoardingPass(String arrival, String boardingIn, String boardingTime, String departure, String destination,
+                        String gate, String origin, String seat, String terminal, String plane) {
         this.arrival = arrival;
         this.boardingIn = boardingIn;
         this.boardingTime = boardingTime;
@@ -28,10 +30,19 @@ public class BoardingPass {
         this.origin = origin;
         this.seat = seat;
         this.terminal = terminal;
+        this.plane = plane;
     }
 
     public String getArrival() {
         return arrival;
+    }
+
+    public String getPlane() {
+        return plane;
+    }
+
+    public void setPlane(String plane) {
+        this.plane = plane;
     }
 
     public void setArrival(String arrival) {
