@@ -46,11 +46,14 @@
                 app:layout_constraintTop_toBottomOf="@+id/tilName">
 
                 <EditText
+                    android:focusableInTouchMode="false"
                     android:id="@+id/etDob"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:editable="false"
                     android:hint="@string/date_of_birth"
-                    android:inputType="date" />
+                    android:inputType="date"
+                    android:singleLine="true" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout

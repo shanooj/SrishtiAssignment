@@ -46,7 +46,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
     private void doLogin() {
 
-        String username = sharedPreferences.getString("userName", null);
+        String username = sharedPreferences.getString("email", null);
         String password = sharedPreferences.getString("password", null);
         String phone = sharedPreferences.getString("phone", null);
 

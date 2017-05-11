@@ -1,18 +1,24 @@
 package com.karbaros.srishtiassignment;
 
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.DatePicker;
 
 import com.karbaros.srishtiassignment.databinding.ActivitySignUpBinding;
 
+import java.util.Calendar;
+
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ActivitySignUpBinding signUpBinding;
+    static ActivitySignUpBinding signUpBinding;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor spEditor;
 
@@ -23,6 +29,18 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
         sharedPreferences = getSharedPreferences("SrishtiLogin", MODE_PRIVATE);
         spEditor = sharedPreferences.edit();
+        signUpBinding.tilDob.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showTruitonDatePickerDialog(view);
+            }
+        });
+        signUpBinding.etDob.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showTruitonDatePickerDialog(view);
+            }
+        });
         signUpBinding.btnSignUp.setOnClickListener(this);
     }
 
@@ -117,5 +135,30 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         } else {
             return android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
         }
+    }
+
+    public static class DatePickerFragment extends DialogFragment implements
+            DatePickerDialog.OnDateSetListener {
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            // Use the current date as the default date in the picker
+            final Calendar c = Calendar.getInstance();
+            int year = c.get(Calendar.YEAR);
+            int month = c.get(Calendar.MONTH);
+            int day = c.get(Calendar.DAY_OF_MONTH);
+
+            // Create a new instance of DatePickerDialog and return it
+            return new DatePickerDialog(getActivity(), this, year, month, day);
+        }
+
+        public void onDateSet(DatePicker view, int year, int month, int day) {
+            // Do something with the date chosen by the user
+            signUpBinding.etDob.setText(day + "/" + (month + 1) + "/" + year);
+        }
+    }
+    public void showTruitonDatePickerDialog(View v) {
+        DialogFragment newFragment = new DatePickerFragment();
+        newFragment.show(getSupportFragmentManager(), "datePicker");
     }
 }
